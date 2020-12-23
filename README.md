@@ -8,4 +8,4 @@ Rasperry toimii myös www-serverinä, jonka kautta soitettavia tiedostoja/albume
 
 Radio lähettää myös tiedot soitettavasta kappaleesta omalle serverille, joka jakaa sitä mm. atmge328+nokia5110 näyttö yhdistelmään. 
 
-[img src="radio.jpg"]
+[](radio.jpg")
