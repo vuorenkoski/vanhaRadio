@@ -1,0 +1,53 @@
+.slidecontainer {
+  width: 100%
+}
+
+#vslaideri {
+  width: 100%	
+}
+
+.listabtn {
+    font-weight: bold;
+    color:navy;
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+
+.kappalebtn {
+    color:navy;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+li {
+  margin: 0 0 6px 0;
+}
+
+#albumit {
+    border: 1px solid black;
+    padding: 6px;
+    margin: 6px
+}
+
+#albumi {
+    border: 1px solid black;
+    padding: 6px;
+    margin: 6px
+}
+
+#kappale {
+    border: 1px solid black;
+    padding: 6px;
+    margin: 6px;
+    width: 30%
+}
+
