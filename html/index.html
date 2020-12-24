@@ -1,22 +1,33 @@
 <html>
 <head>
+  <meta charset="utf-8"/>
+  <title>Salora - Milano</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <div class='container'>
     <h1>Salora - Milano</h1>
-    <div id='kappale'>
+    <div>
+      <div class='kappaleContainer'>
+        <h2>Nyt soi</h2>
+        <div id='kappale'></div>
+      </div>
+      <div class='volumeContainer'>
+        <h2>Äänenvoimakkuus</h2>
+        <input type='range' min='40' max='100' value='40' id='vslaideri'/>
+      </div>
     </div>
-    <div class='slaidercontainer'>
-      <input type='range' min='40' max='100' value='50' id='vslaideri'>
+    <div>
+      <div class='albumitContainer'>
+        <h2>Soittolistat</h2>
+        <div id='albumit'></div>
+      </div>
+      <div class='radioContainer'>
+        <h2>Radiokanavat</h2>
+        <div id='radiokanavat'></div>
+      </div>
     </div>
-    <div id='albumit'>
-    </div>
-    <div id='albumi'>
-    </div>
-    <H2>Radiokanavat</H2>
-    <div id='radiokanavat'>
-    </div>
+    <div class='albumiContainer' id='albumi'></div>
   </div>
   <script type="text/javascript" src="listat.js"></script>
 </body>

@@ -1,0 +1,12 @@
+Radio City
+http://stream.bauermedia.fi/radiocity/radiocity_128.mp3
+Radio Nova
+http://stream.bauermedia.fi/radionova/radionova_128.mp3
+NRJ
+http://stream.bauermedia.fi/nrj/nrj_128.mp3
+Basso Radio
+http://stream.bauermedia.fi/basso/bassoradio_128.mp3
+Novan jouluradio
+http://stream.bauermedia.fi/radionova/jouluradio_128.mp3
+Jouluradio
+http://c0.toivon.net:8100/stream

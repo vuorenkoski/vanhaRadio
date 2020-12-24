@@ -8,6 +8,8 @@
 
 const char *PATH_TO_VOLUME_DIRECTION = "/var/www/html/aseta_volume.txt";
 const char *PATH_TO_VOLUME_DATA = "/var/www/html/volume.txt";
+const int pt[10] = {35,50,70,100,200,300,400,500,750,950}; // vanhan potentiometrin skaala ei ole ihan lineaarinen
+
 
 void aseta(int vol)
 {
@@ -24,17 +26,12 @@ void aseta(int vol)
 }
 
 int tulkitse (int lukema) {
-   if (lukema<35) return 0;
-   if (lukema<50) return 55;
-   if (lukema<70) return 60;
-   if (lukema<100) return 65;
-   if (lukema<200) return 70;
-   if (lukema<300) return 75;
-   if (lukema<400) return 80;
-   if (lukema<500) return 85;
-   if (lukema<750) return 90;
-   if (lukema<950) return 95;
-   return 100;
+  int i;
+  if (lukema<pt[0]) return 0;
+  for (i=0;i<9;i++) {
+    if (lukema<pt[i+1]) return 50+5*i+(5*(lukema-pt[i]))/(pt[i+1]-pt[i]);
+  }
+  return 95;
 }
 
 void tarkistaHtmlSaato() {

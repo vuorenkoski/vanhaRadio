@@ -1,5 +1,59 @@
-.slidecontainer {
-  width: 100%
+.container {
+  background: white;
+}
+
+h2 {
+  margin-block-start: 0px;
+  margin-block-end: 10px;
+}
+
+.kappaleContainer { 
+  float: left;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background: lightblue; 
+  width: 40%; 
+  height: 110px 
+}
+
+.volumeContainer {
+  float: right;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background: lightblue;
+  width: 52%;
+  height: 110px
+}
+
+.albumitContainer {
+  float: left;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background: lightblue;
+  width: 62%;
+  height: 250px
+}
+
+.radioContainer {
+  float: right;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background: lightblue;
+  width: 30%;
+  height: 250px
+}
+
+.albumiContainer {
+  float: left;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background: lightblue;
+  min-width: 96%
 }
 
 #vslaideri {
@@ -8,46 +62,43 @@
 
 .listabtn {
     font-weight: bold;
-    color:navy;
+    color: navy;
     border: none;
     background: none;
     font-size: 18px;
 }
 
 .kappalebtn {
-    color:navy;
+    color: navy;
     border: none;
     background: none;
     text-align: left;
-    font-size: 18px;
-}
-
-ul {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-}
-
-li {
-  margin: 0 0 6px 0;
+    font-size: 18px
 }
 
 #albumit {
-    border: 1px solid black;
-    padding: 6px;
-    margin: 6px
+  margin-block-start: 0px;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2
+}
+
+ul {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+li {
+  margin: 0 0 4px 0
+}
+
+
+#albumit {
 }
 
 #albumi {
-    border: 1px solid black;
-    padding: 6px;
-    margin: 6px
 }
 
 #kappale {
-    border: 1px solid black;
-    padding: 6px;
-    margin: 6px;
-    width: 30%
 }
 
