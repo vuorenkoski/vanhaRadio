@@ -2,9 +2,9 @@
 
 Projektissa vanhaan 50-luvun radioon (Salora Milano) on asennettu raspberry pi, jolla voi soittaa mp3 tiedostoja (esim. YLE arkston vanoja radio-ohjelmia tai muuta mp3 musiikkia). Sillä voi myös striimata interenradiokanavia. 
 
-Radion "kanavina" toimivat albummit. Kanavaa voi vaihtaa vanhalla kanavalitsemlla, johon on liitetty magneetit+magneettianturit jotka rekisteröivät kanavavalitsemen pyörityksen. Äänenvoimakkuus nappi on toteuttu Wemos D1 mini (ESP8266) mikrokontrollelilla, joka ottaa analogista signaalia sisään. Atamega sylkee ulos äänenvoimakkuusdataa sarjaportin kautta raspikselle.
+Radion "kanavina" toimivat albumit. ALbumit voi vaihtaa vanhalla kanavalitsemlla, johon on liitetty magneetit+magneettianturit jotka rekisteröivät kanavavalitsemen pyörityksen. Äänenvoimakkuus nappi on toteuttu Wemos D1 mini (ESP8266) mikrokontrollelilla, joka ottaa analogista signaalia sisään. Atamega sylkee ulos äänenvoimakkuusdataa sarjaportin kautta raspikselle. Radiokanavia voi valita painamalla vanhan radion nappeja.
 
-Rasperry toimii myös www-serverinä, jonka kautta soitettavia tiedostoja/albumeja voi valita sekä säätää äänenvoimakkuutta.
+Rasperry toimii myös www-serverinä, jonka avulla soitettavia tiedostoja/albumeja/radiokanavia voi valita sekä säätää äänenvoimakkuutta.
 
 Radio lähettää myös tiedot soitettavasta kappaleesta omalle serverille, joka jakaa sitä mm. atmge328+nokia5110 näyttö yhdistelmään. 
 
@@ -25,5 +25,7 @@ Lisäksi raspiksella on albums_to_json.py -ohjelma, jolla luodaan tarvittavat js
 ### MCU
 
 Tässä on simppeli koodi joka lukee analogisisäntuloa ja jos on muutosta niin lähettä arvon (0-1000) serialilla ulos.
+
+### In action
 
 <img src="radio.jpg">
