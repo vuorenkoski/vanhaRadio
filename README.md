@@ -14,7 +14,7 @@ Radio lähettää myös tiedot soitettavasta kappaleesta omalle serverille, joka
 
 Raspiksella pyörii kolme demonia: musiikki, volume ja viesti. Lisäksi on php scripti joka ottaa selaimelta vastaan käskyt soittaa kappale tai lista, tai muuttaa äänenvoimakkuutta. Veistintä php:n ja muusiikkidemoninen kanssa hoidetaan luomalla viestitieodsto, jonka olemassaoloa demoni tarkkailee, lukee ja tuhoaa.
 
-- Musiikki vastaa muiden nappien kuin volumanpin kuuntelusta, kappaleiden valinnasta ja käskystä soittaa. Itse kappaleen soitto tapahtuu mpg123 ohjelmalla. Alussa musiikki forkkaa tämän omaksi prosessikseen taustalle.
+- Musiikki vastaa muiden nappien kuin volumanpin kuuntelusta (radio tyyliset napi sisäinen musiikki, radio1, radio2, radio3), kappaleiden valinnasta ja käskystä soittaa. Itse kappaleen soitto tapahtuu mpg123 ohjelmalla. Alussa musiikki forkkaa tämän omaksi prosessikseen taustalle.
 - Volume saada serialin kautta viestejä MCU:lta. Se tulkitsee ne ja säätää äänenvoimakkuudet
 - Viesti lähettää tiedon soitettavasta kappaleesta serverille. Välitys tapahtuu siten, että musiikki luo tiedoston jota demoni tarkkailee, lukee ja poistaa
 
