@@ -22,6 +22,13 @@ Html serveri on teottu html + css + js(frontend) + php(backend) kuviolla.
 
 Lisäksi raspiksella on albums_to_json.py -ohjelma, jolla luodaan tarvittavat json ja muut aputiedoston albumirakenteesta. Albumit laitetaan omiksi kansioiksi 
 
+### Riippuvuudet
+
+WiringPi: http://wiringpi.com/
+
+mpg123-1.25.8: https://www.mpg123.de/
+
+
 ### MCU
 
 Tässä on simppeli koodi joka lukee analogisisäntuloa ja jos on muutosta niin lähettä arvon (0-1000) serialilla ulos.
