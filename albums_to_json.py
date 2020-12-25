@@ -7,6 +7,8 @@ jsondatafile = '/var/www/html/contents.json'
 deamondatafile = '/home/pi/music/files.txt'
 albumdatafile = '/home/pi/music/albums.txt'
 
+os.remove('/home/pi/radio.dat')
+
 data = {'albums':[]}
 id = 0
 aid = 1

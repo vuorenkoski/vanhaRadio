@@ -17,7 +17,7 @@ void aseta(int vol)
   extern FILE *popen();
   char buff[512];
 
-  sprintf(buff,"/usr/bin/amixer sset PCM,0 %i%c",vol,'%');
+  sprintf(buff,"/usr/bin/amixer sset Headphone,0 %i%c",vol,'%');
   in=popen(buff, "r");
   pclose(in);
   in=fopen(PATH_TO_VOLUME_DATA,"w");
