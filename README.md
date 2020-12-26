@@ -33,6 +33,86 @@ mpg123-1.25.8: https://www.mpg123.de/
 
 Tässä on simppeli koodi joka lukee analogisisäntuloa ja jos on muutosta niin lähettä arvon (0-1000) serialilla ulos.
 
+
+## Asennus
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install apache2 php git python3-pip wiringpi
+pip3 install tinytag
+gcc -o musiikki musiikki.c -l wiringPi
+gcc -o volume volume.c -l wiringPi
+gcc -o viesti viesti.c
+mkdir /home/pi/control
+systemctl enable volume.service
+systemctl enable viesti.service
+systemctl enable musiikki.service
+
+volume.c, pitää ehkä säätää oikea ulostulo tähän: "amixer sset Headphone,0"
+Eli Headphonen tilalle joku toinen
+tällä voi katsoa vaihtoehtoja: "amixer scontrols"
+```
+
+/etc/systemd/system/volume.service
+
+```
+[Unit]
+Description=Äänenvoimmakkuus
+After=network.target
+
+[Service]
+ExecStart=/home/pi/volume
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+```
+
+/etc/systemd/system/viesti.service
+
+```
+[Unit]
+Description=Viestin lähettäminen
+After=network.target
+
+[Service]
+ExecStart=/home/pi/viesti
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+```
+
+/etc/systemd/system/musiikki.service
+
+```
+[Unit]
+Description=Musiikin toisto
+After=network.target
+
+[Service]
+ExecStart=/home/pi/musiikki
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ### In action
 
 <img src="radio.jpg">
+
+

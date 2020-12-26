@@ -5,11 +5,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
 const char *PATH_TO_VOLUME_DIRECTION = "/var/www/html/aseta_volume.txt";
-const char *PATH_TO_VOLUME_DATA = "/var/www/html/volume.txt";
 const int pt[10] = {35,50,70,100,200,300,400,500,750,950}; // vanhan potentiometrin skaala ei ole ihan lineaarinen
-
 
 void aseta(int vol)
 {
@@ -20,9 +17,6 @@ void aseta(int vol)
   sprintf(buff,"/usr/bin/amixer sset Headphone,0 %i%c",vol,'%');
   in=popen(buff, "r");
   pclose(in);
-  in=fopen(PATH_TO_VOLUME_DATA,"w");
-  fprintf(in,"%i",vol);
-  fclose(in);
 }
 
 int tulkitse (int lukema) {
@@ -36,8 +30,7 @@ int tulkitse (int lukema) {
 
 void tarkistaHtmlSaato() {
   FILE *fp;
-  int volume;
-  char buffer[500];
+  char buffer[10];
   if (access(PATH_TO_VOLUME_DIRECTION, F_OK)==0) {
     fp=fopen(PATH_TO_VOLUME_DIRECTION, "r");
     fgets(buffer,10,fp);
@@ -50,24 +43,20 @@ void tarkistaHtmlSaato() {
 void main()
 {
   char c;
-  int lukema,volume;
+  int lukema,volume=0;
   int serial;
 
   serial=serialOpen("/dev/ttyAMA0", 9600);
 
-  if (serial==-1)
-  {
+  if (serial==-1) {
    printf("Serial open error, quitting\n");
    return;
   }
 
-  while (1==1)
-  {
-    do
-    {
-      while (serialDataAvail(serial)==0)
-      {
-        delay (5);
+  while (1) {
+    do {
+      while (serialDataAvail(serial)==0) {
+        delay(5);
         if (volume==0) {
           tarkistaHtmlSaato();
         }
