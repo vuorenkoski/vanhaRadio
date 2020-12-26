@@ -52,6 +52,11 @@ systemctl enable musiikki.service
 volume.c, pitää ehkä säätää oikea ulostulo tähän: "amixer sset Headphone,0"
 Eli Headphonen tilalle joku toinen
 tällä voi katsoa vaihtoehtoja: "amixer scontrols"
+
+Serial asetus:
+raspi-config/interface options/Serial port
+shell accessible over serial: Ei
+serial port hardware enabled: Kyllä
 ```
 
 /etc/systemd/system/volume.service
