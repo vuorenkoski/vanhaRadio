@@ -34,7 +34,7 @@ h2 {
   border: none;
   background: lightblue;
   width: 62%;
-  height: 250px
+  height: 300px
 }
 
 .radioContainer {
@@ -44,7 +44,7 @@ h2 {
   border: none;
   background: lightblue;
   width: 30%;
-  height: 250px
+  height: 300px
 }
 
 .albumiContainer {
@@ -90,10 +90,6 @@ ul {
 
 li {
   margin: 0 0 4px 0
-}
-
-
-#albumit {
 }
 
 #albumi {

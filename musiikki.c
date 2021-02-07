@@ -26,7 +26,7 @@ int lista=0, uusiraita=1;
 int nappi=0, radio=0, uusilista=1, aloitus=1, eka_raita=0;
 int etsii=0, etsii_lkm=0, soitetut[100], soitetut_lkm;
 int soitetutListat[20], soitetutListat_lkm=0, magneetti, raita, raitoja, listat;
-char artist[150], title[150], year[50], lista_s[20][50];
+char artist[150], title[150], year[50], lista_s[30][50];
 
 void kappaleenDatanLahetys(char* title, char* artist, char* year) {
   FILE *fp;
